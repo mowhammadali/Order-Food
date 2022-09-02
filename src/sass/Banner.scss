@@ -1,0 +1,164 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    margin-bottom: 100px;
+    background-color: $bgColor;
+
+    @include media(768){
+        flex-direction: column;
+    }
+
+    @include media(576){
+        padding: 20px 30px;
+    }
+
+    .heading{
+        width: 45%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        @include media(768){
+            width: 80%;
+            align-items: center;
+            margin-bottom: 40px;
+        }
+
+        @include media(576){
+            width: 100%;
+        }
+    }
+
+    .images{
+        width: 54%;
+
+        @include media(768){
+            width: 90%;
+        }
+    }
+}
+
+.heading{
+
+    h1{
+        font-size: 56px;
+        color: $primaryColor;
+
+        @include media(992){
+            font-size: 34px;
+        }
+    }
+
+    h3{
+        font-size: 32px;
+
+        @include media(992){
+            font-size: 26px;
+        }
+
+        @include media(768){
+            text-align: center;
+        }
+    }
+
+    a{
+        padding: 10px 20px;
+        color: $bgColor;
+        background-color: $primaryColor;
+        border: 2px solid $primaryColor;
+        border-radius: 25px;
+        font-size: 18px;
+        font-weight: bold;
+        transition: all .4s ease-in-out;
+
+        &:hover{
+            background-color: $bgColor;
+            color: $primaryColor;
+        }
+
+        @include media(992){
+            font-size: 14px;
+        }
+    }
+}
+
+.images{
+
+    position: relative;
+
+    .chicken{
+        width: 95%;
+    }
+
+    .rosemary{
+        position: absolute;
+        top: 20px;
+        right: 10%;
+        width: 100px;
+
+        @include media(992){
+            right: 2%;
+            width: 70px;
+        }
+
+        @include media(768){
+            width: 90px;
+        }
+
+        @include media(576){
+            width: 60px;
+            right: -30px;
+        }
+    }
+
+    .pepper{
+        position: absolute;
+        bottom: 50px;
+        left: 0;
+        width: 100px;
+
+        @include media(992){
+            bottom: 30px;
+            width: 60px;
+        }
+
+        @include media(768){
+            width: 90px;
+        }
+
+        @include media(576){
+            width: 50px;
+            bottom: 10px;
+            left: -20px;
+        }
+    }
+
+    .basil{
+        position: absolute;
+        width: 60px;
+        bottom: 100px;
+        right: 5%;
+
+        @include media(992){
+            right: 2%;
+            bottom: 30px;
+            width: 40px;
+        }
+
+        @include media(768){
+            width: 70px;
+        }
+
+        @include media(576){
+            width: 40px;
+            bottom: 20px;
+            right: -10px;
+        }
+    }
+}

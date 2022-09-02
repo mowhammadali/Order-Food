@@ -1,0 +1,156 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 20px 30px;
+  }
+}
+.container .logo {
+  width: 64px;
+}
+
+@media screen and (max-width: 768px) {
+  .menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    background-color: #d51010;
+    height: 100vh;
+    width: 300px;
+    transform: translateX(-100%);
+    transition: all 0.8s ease-in-out;
+  }
+}
+@media screen and (max-width: 400px) {
+  .menu {
+    width: 220px;
+  }
+}
+.menu .close {
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .menu .close {
+    padding: 8px;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu .close img {
+    width: 30px;
+    cursor: pointer;
+  }
+}
+.menu ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+@media screen and (max-width: 992px) {
+  .menu ul {
+    gap: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu ul {
+    flex-direction: column;
+    gap: 35px;
+  }
+}
+.menu a {
+  color: #272727;
+  font-weight: bolder;
+}
+@media screen and (max-width: 992px) {
+  .menu a {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .menu a {
+    font-size: 18px;
+    color: #f1f1f1;
+  }
+}
+.menu a:hover {
+  color: #d51010;
+}
+@media screen and (max-width: 768px) {
+  .menu a:hover {
+    color: #272727;
+  }
+}
+.menu .order {
+  color: #d51010;
+  padding: 5px 10px;
+  border: 2px solid #d51010;
+  border-radius: 25px;
+  transition: all 0.2s ease-in-out;
+}
+@media screen and (max-width: 768px) {
+  .menu .order {
+    color: #f1f1f1;
+    border: 3px solid #272727;
+  }
+}
+.menu .order:hover {
+  background-color: #d51010;
+  color: #f1f1f1;
+}
+@media screen and (max-width: 768px) {
+  .menu .order:hover {
+    background-color: #272727;
+    color: #f1f1f1;
+  }
+}
+
+.menu.active {
+  transform: translate(0);
+}
+
+.shopify {
+  cursor: pointer;
+  position: relative;
+}
+.shopify a {
+  display: inline-block;
+}
+.shopify span {
+  position: absolute;
+  bottom: 2px;
+  right: 0px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-size: 14px;
+  color: #f1f1f1;
+  background-color: #d51010;
+  transition: all 0.4s ease-in-out;
+}
+.shopify:hover span {
+  background-color: #272727;
+}
+
+.hambergurMenu {
+  width: 40px;
+  cursor: pointer;
+  display: none;
+}
+@media screen and (max-width: 768px) {
+  .hambergurMenu {
+    display: inline-block;
+  }
+}
+
+/*# sourceMappingURL=Navbar.module.css.map */

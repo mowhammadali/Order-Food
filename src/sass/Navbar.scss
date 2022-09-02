@@ -1,0 +1,164 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 70px;
+    background-color: $bgColor;
+
+    @include media(400){
+        padding: 20px 30px;
+    }
+
+    .logo{
+        width: 64px;
+    }
+}
+
+.menu{
+
+    @include media(768){
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 3;
+        background-color: $primaryColor;
+        height: 100vh;
+        width: 300px;
+        transform: translateX(-100%);
+        transition: all .8s ease-in-out;
+    }
+
+    @include media(400){
+        width: 220px;
+    }
+
+    .close{
+        display: none;
+
+        @include media(768){
+            padding: 8px;
+            margin-bottom: 40px;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        img{
+
+            @include media(768){
+                width: 30px;
+                cursor: pointer;
+            }
+        }
+    }
+
+    ul{
+        display: flex;
+        align-items: center;
+        gap: 30px;
+
+        @include media(992){
+            gap: 20px;
+        }
+
+        @include media(768){
+            flex-direction: column;
+            gap: 35px;
+        }
+    }
+
+    a{
+        color: $textColor;
+        font-weight: bolder;
+
+        @include media(992){
+            font-size: 14px;
+        }
+
+        @include media(768){
+            font-size: 18px;
+            color: $bgColor;
+        }
+
+        &:hover{
+            color: $primaryColor;
+
+            @include media(768){
+                color: $textColor;
+            }
+        }
+    }
+
+    .order{
+        color: $primaryColor;
+        padding: 5px 10px;
+        border: 2px solid $primaryColor;
+        border-radius: 25px;
+        transition: all .2s ease-in-out;
+
+        @include media(768){
+            color: $bgColor;
+            border: 3px solid $textColor;
+        }
+
+        &:hover{
+            background-color: $primaryColor;
+            color: $bgColor;
+
+            @include media(768){
+                background-color: $textColor;
+                color: $bgColor;
+            }
+        }
+    }
+
+
+}
+
+.menu.active{
+    transform: translate(0);
+}
+
+.shopify{
+
+    cursor: pointer;
+    position: relative;
+
+    a{
+        display: inline-block;
+    }
+
+    span{
+        position: absolute;
+        bottom: 2px;
+        right: 0px;
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        font-size: 14px;
+        color: $bgColor;
+        background-color: $primaryColor;
+        transition: all .4s ease-in-out;
+    }
+
+    &:hover span{
+        background-color: $textColor;
+    }
+}
+
+.hambergurMenu{
+    width: 40px;
+    cursor: pointer;
+    display: none;
+
+    @include media(768){
+        display: inline-block;
+    }
+}
+
+

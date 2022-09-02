@@ -1,0 +1,169 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  background-color: #f1f1f1;
+  border: 1px solid #dfdfdf;
+  border-radius: 12px;
+  box-shadow: -1px -1px 2px 1px #cfcfcf;
+}
+.container .images {
+  position: relative;
+}
+.container .foodImg {
+  width: 280px;
+  height: 160px;
+  border-radius: 15px;
+}
+@media screen and (max-width: 1200px) {
+  .container .foodImg {
+    width: 380px;
+    height: 255px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container .foodImg {
+    width: 280px;
+    height: 160px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container .foodImg {
+    width: 200px;
+    height: 115px;
+  }
+}
+.container .medal {
+  position: absolute;
+  bottom: -25px;
+  right: 0;
+}
+.container .type {
+  display: inline-block;
+  padding: 8px 25px;
+  border-radius: 25px;
+  font-weight: bold;
+  color: #d51010;
+  background-color: #f1ccd0;
+}
+@media screen and (max-width: 400px) {
+  .container .type {
+    font-size: 13px;
+    padding: 5px 15px;
+  }
+}
+.container h3 {
+  font-size: 25px;
+}
+@media screen and (max-width: 400px) {
+  .container h3 {
+    font-size: 18px;
+  }
+}
+.container .prices {
+  display: flex;
+  gap: 14px;
+}
+.container .buttons {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.container .order {
+  width: 140px;
+  height: 32px;
+  border: 2px solid #8a8a8a;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #272727;
+  background-color: inherit;
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .container .order {
+    font-size: 14px;
+    width: 100px;
+  }
+}
+.container .order:hover {
+  color: #d51010;
+  border-color: #d51010;
+}
+.container .actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.container .trash {
+  width: 32px;
+  height: 32px;
+  border: none;
+  border-radius: 12px;
+  background-color: #d51010;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+.container .trash img {
+  width: 20px;
+}
+.container .minus, .container .plus {
+  width: 32px;
+  height: 32px;
+  font-size: 20px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  background-color: #d51010;
+  color: #f1f1f1;
+  cursor: pointer;
+}
+.container .count {
+  font-size: 18px;
+  font-weight: bold;
+  color: #272727;
+}
+.container .heart {
+  border: 2px solid #272727;
+  border-radius: 50%;
+  padding: 8px;
+  width: 40px;
+  cursor: pointer;
+}
+@media screen and (max-width: 400px) {
+  .container .heart {
+    width: 35px;
+    padding: 6px;
+  }
+}
+.container .heart:hover {
+  border-color: #d51010;
+}
+
+.prices p:nth-child(1) {
+  text-decoration: line-through;
+  color: #272727;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 400px) {
+  .prices p:nth-child(1) {
+    font-size: 15px;
+  }
+}
+
+.prices p:nth-child(2) {
+  color: #d51010;
+  font-weight: bold;
+  font-size: 18px;
+}
+@media screen and (max-width: 400px) {
+  .prices p:nth-child(2) {
+    font-size: 15px;
+  }
+}
+
+/*# sourceMappingURL=Food.module.css.map */

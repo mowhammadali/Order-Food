@@ -1,0 +1,103 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 70px;
+  margin-bottom: 100px;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 60px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container {
+    padding: 0 30px;
+  }
+}
+.container .socialMedia {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+@media screen and (max-width: 768px) {
+  .container .socialMedia {
+    align-items: center;
+    width: 100%;
+  }
+}
+@media screen and (max-width: 992px) {
+  .container h1 {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container h1 {
+    font-size: 32px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container h1 {
+    font-size: 22px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .container h1 {
+    font-size: 19px;
+  }
+}
+.container button {
+  padding: 12px;
+  border: 1px solid #c2c2c2;
+  border-radius: 20px;
+  background-color: inherit;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 14px;
+  cursor: pointer;
+}
+@media screen and (max-width: 992px) {
+  .container button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container button {
+    padding: 14px;
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container button {
+    padding: 8px;
+    font-size: 12px;
+  }
+}
+.container button:hover {
+  background-color: #bfbfbf;
+}
+.container .image {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .container .image {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container .image {
+    width: 100%;
+  }
+}
+.container .image img {
+  width: 100%;
+  border-radius: 20px;
+}
+
+/*# sourceMappingURL=SocialMedia.module.css.map */

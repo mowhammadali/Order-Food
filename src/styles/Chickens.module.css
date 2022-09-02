@@ -1,0 +1,17 @@
+.container {
+  width: 87%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  background-color: #fff;
+  margin-bottom: 40px;
+}
+@media screen and (max-width: 1200px) {
+  .container {
+    flex-direction: column;
+    gap: 40px;
+  }
+}
+
+/*# sourceMappingURL=Chickens.module.css.map */

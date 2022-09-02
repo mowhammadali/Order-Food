@@ -1,0 +1,168 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 70px;
+  margin-bottom: 100px;
+  background-color: #f1f1f1;
+}
+@media screen and (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container {
+    padding: 20px 30px;
+  }
+}
+.container .heading {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 20px;
+}
+@media screen and (max-width: 768px) {
+  .container .heading {
+    width: 80%;
+    align-items: center;
+    margin-bottom: 40px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .container .heading {
+    width: 100%;
+  }
+}
+.container .images {
+  width: 54%;
+}
+@media screen and (max-width: 768px) {
+  .container .images {
+    width: 90%;
+  }
+}
+
+.heading h1 {
+  font-size: 56px;
+  color: #d51010;
+}
+@media screen and (max-width: 992px) {
+  .heading h1 {
+    font-size: 34px;
+  }
+}
+.heading h3 {
+  font-size: 32px;
+}
+@media screen and (max-width: 992px) {
+  .heading h3 {
+    font-size: 26px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .heading h3 {
+    text-align: center;
+  }
+}
+.heading a {
+  padding: 10px 20px;
+  color: #f1f1f1;
+  background-color: #d51010;
+  border: 2px solid #d51010;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  transition: all 0.4s ease-in-out;
+}
+.heading a:hover {
+  background-color: #f1f1f1;
+  color: #d51010;
+}
+@media screen and (max-width: 992px) {
+  .heading a {
+    font-size: 14px;
+  }
+}
+
+.images {
+  position: relative;
+}
+.images .chicken {
+  width: 95%;
+}
+.images .rosemary {
+  position: absolute;
+  top: 20px;
+  right: 10%;
+  width: 100px;
+}
+@media screen and (max-width: 992px) {
+  .images .rosemary {
+    right: 2%;
+    width: 70px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .images .rosemary {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .images .rosemary {
+    width: 60px;
+    right: -30px;
+  }
+}
+.images .pepper {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 100px;
+}
+@media screen and (max-width: 992px) {
+  .images .pepper {
+    bottom: 30px;
+    width: 60px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .images .pepper {
+    width: 90px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .images .pepper {
+    width: 50px;
+    bottom: 10px;
+    left: -20px;
+  }
+}
+.images .basil {
+  position: absolute;
+  width: 60px;
+  bottom: 100px;
+  right: 5%;
+}
+@media screen and (max-width: 992px) {
+  .images .basil {
+    right: 2%;
+    bottom: 30px;
+    width: 40px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .images .basil {
+    width: 70px;
+  }
+}
+@media screen and (max-width: 576px) {
+  .images .basil {
+    width: 40px;
+    bottom: 20px;
+    right: -10px;
+  }
+}
+
+/*# sourceMappingURL=Banner.module.css.map */

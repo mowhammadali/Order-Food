@@ -1,0 +1,17 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    width: 87%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    background-color: #fff;
+    margin-bottom: 40px;
+
+    @include media(1200){
+        flex-direction: column;
+        gap: 40px;
+    }
+}

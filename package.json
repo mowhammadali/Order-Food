@@ -8,6 +8,7 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "react-router-dom": "^6.3.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -15,7 +16,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "sass": "sass --watch src/sass/Navbar.scss:src/styles/Navbar.module.css src/sass/Banner.scss:src/styles/Banner.module.css src/sass/About.scss:src/styles/About.module.css src/sass/FeaturedMenu.scss:src/styles/FeaturedMenu.module.css src/sass/Chickens.scss:src/styles/Chickens.module.css src/sass/Food.scss:src/styles/Food.module.css src/sass/SocialMedia.scss:src/styles/SocialMedia.module.css src/sass/Footer.scss:src/styles/Footer.module.css"
   },
   "eslintConfig": {
     "extends": [

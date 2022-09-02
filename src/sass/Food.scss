@@ -1,0 +1,183 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px;
+    background-color: $bgColor;
+    border: 1px solid #dfdfdf;
+    border-radius: 12px;
+    box-shadow: -1px -1px 2px 1px #cfcfcf;
+
+    .images{
+        position: relative;
+    }
+
+    .foodImg{
+        width: 280px;
+        height: 160px;
+        border-radius: 15px;
+
+        @include media(1200){
+            width: 380px;
+            height: 255px;
+        }
+
+        @include media(576){
+            width: 280px;
+            height: 160px;
+        }
+
+        @include media(400){
+            width: 200px;
+            height: 115px;
+        }
+    }
+
+    .medal{
+        position: absolute;
+        bottom: -25px;
+        right: 0;
+    }
+
+    .type{
+        display: inline-block;
+        padding: 8px 25px;
+        border-radius: 25px;
+        font-weight: bold;
+        color: $primaryColor;
+        background-color: #f1ccd0;
+
+        @include media(400){
+            font-size: 13px;
+            padding: 5px 15px;
+        }
+    }
+
+    h3{
+        font-size: 25px;
+
+        @include media(400){
+            font-size: 18px;
+        }
+    }
+
+    .prices{
+        display: flex;
+        gap: 14px;
+    }
+
+    .buttons{
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .order{
+        width: 140px;
+        height: 32px;
+        border: 2px solid #8a8a8a;
+        border-radius: 25px;
+        font-size: 16px;
+        font-weight: bold;
+        color: $textColor;
+        background-color: inherit;
+        cursor: pointer;
+
+        @include media(400){
+            font-size: 14px;
+            width: 100px;
+        }
+
+        &:hover{
+            color: $primaryColor;
+            border-color: $primaryColor;
+        }
+    }
+
+    .actions{
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .trash{
+
+        width: 32px;
+        height: 32px;
+        border: none;
+        border-radius: 12px;
+        background-color: $primaryColor;
+        color: $bgColor;
+        cursor: pointer;
+
+        img{
+            width: 20px;
+        }
+    }
+
+    .minus{
+        width: 32px;
+        height: 32px;
+        font-size: 20px;
+        font-weight: bold;
+        border: none;
+        border-radius: 12px;
+        background-color: $primaryColor;
+        color: $bgColor;
+        cursor: pointer;
+    }
+
+    .plus{
+        @extend .minus;
+    }
+
+    .count{
+        font-size: 18px;
+        font-weight: bold;
+        color: $textColor
+    }
+
+    .heart{
+        border: 2px solid $textColor;
+        border-radius: 50%;
+        padding: 8px;
+        width: 40px;
+        cursor: pointer;
+
+        @include media(400){
+            width: 35px;
+            padding: 6px;
+        }
+
+        &:hover{
+            // background-color: $primaryColor;
+            border-color: $primaryColor;
+        }
+    }
+}
+
+.prices p:nth-child(1){
+    text-decoration: line-through;
+    color: $textColor;
+    font-weight: bold;
+    font-size: 18px;
+
+    @include media(400){
+        font-size: 15px;
+    }
+}
+
+.prices p:nth-child(2){
+    color: $primaryColor;
+    font-weight: bold;
+    font-size: 18px;
+
+    @include media(400){
+        font-size: 15px;
+    }
+}

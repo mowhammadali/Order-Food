@@ -1,0 +1,99 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 70px;
+    margin-bottom: 100px;
+
+    @include media(768){
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include media(400){
+        padding: 0 30px;
+    }
+
+    .socialMedia{
+        width: 40%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 30px;
+
+        @include media(768){
+            align-items: center;
+            width: 100%;
+        }
+    }
+
+    h1{
+        @include media(992){
+            font-size: 20px;
+        }
+
+        @include media(768){
+            font-size: 32px;
+        }
+
+        @include media(576){
+            font-size: 22px;
+        }
+
+        @include media(400){
+            font-size: 19px;
+        }
+    }
+
+    button{
+        padding: 12px;
+        border: 1px solid #c2c2c2;
+        border-radius: 20px;
+        background-color: inherit;
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        font-weight: bold;
+        font-size: 14px;
+        cursor: pointer;
+
+        @include media(992){
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        @include media(768){
+            padding: 14px;
+            font-size: 14px;
+        }
+
+        @include media(768){
+            padding: 8px;
+            font-size: 12px;
+        }
+
+        &:hover{
+            background-color: #bfbfbf;
+        }
+    }
+
+    .image{
+        width: 50%;
+
+        @include media(768){
+            width: 80%;
+        }
+
+        @include media(576){
+            width: 100%;
+        }
+
+        img{
+            width: 100%;
+            border-radius: 20px;
+        }
+    }
+}

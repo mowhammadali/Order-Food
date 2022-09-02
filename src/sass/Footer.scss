@@ -1,0 +1,147 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 70px;
+    background-color: $primaryColor;
+
+    @include media(768){
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    @include media(400){
+        padding: 50px 30px;
+    }
+
+    .info{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 20px;
+
+        @include media(768){
+            width: 80%;
+            align-items: center;
+        }
+    }
+
+    .title{
+        font-size: 40px;
+        color: $bgColor;
+
+        @include media(400){
+            font-size: 32px;
+        }
+    }
+
+    p{
+        font-size: 18px;
+        color: $bgColor;
+
+        @include media(768){
+            text-align: center;
+        }
+    }
+
+    .navbar{
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-evenly;
+        gap: 50px;
+        width: 39%;
+
+        @include media(1200){
+            justify-content: center;
+        }
+
+        @include media(992){
+            gap: 40px;
+            justify-content: flex-end;
+        }
+
+        @include media(768){
+            width: 80%;
+            justify-content: space-evenly;
+        }
+
+        @include media(576){
+            width: 90%;
+            justify-content: space-between;
+        }
+
+        @include media(400){
+            width: 100%;
+            gap: 0;
+            justify-content: space-around;
+        }
+    }
+
+    .menu{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+
+        li{
+            &:nth-child(1){
+                font-weight: bold;
+            }
+        }
+    }
+
+    li{
+        font-size: 18px;
+        color: $bgColor;
+        cursor: pointer;
+
+        @include media(400){
+            font-size: 14px;
+        }
+
+        &:hover{
+            color: #0c0c0c
+        }
+    }
+
+    .resources{
+        @extend .menu;
+    }
+
+    .socialMedia{
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 15px;
+
+        @include media(992){
+            align-items: flex-end;
+        }
+
+        @include media(768){
+            width: 80%;
+            align-items: center;
+        }
+    }
+
+    h5{
+        font-size: 20px;
+        color: $bgColor;
+    }
+
+    .icons{
+        display: flex;
+        align-items: center;
+        gap: 20px;
+    }
+
+    img{
+        cursor: pointer;
+    }
+}

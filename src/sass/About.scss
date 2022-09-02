@@ -1,0 +1,115 @@
+@import "variable";
+@import "mixin";
+
+.container{
+    padding: 50px 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    position: relative;
+
+    @include media(768){
+        padding: 50px 100px;
+    }
+
+    @include media(576){
+        padding: 50px 40px;
+    }
+
+    h1{
+        font-family: cursive;
+        color: $textColor;
+        font-size: 48px;
+
+        @include media(768){
+            font-size: 36px;
+        }
+
+        @include media(576){
+            font-size: 30px;
+        }
+
+        @include media(400){
+            font-size: 26px;
+        }
+    }
+
+    p{
+        text-align: center;
+        color: $textColor;
+        font-size: 22px;
+        line-height: 35px;
+
+        @include media(576){
+            font-size: 18px;
+        }
+
+        @include media(400){
+            font-size: 16px;
+        }
+    }
+
+    .pepper1{
+        width: 110px;
+        position: absolute;
+        top: 300px;
+        left: 5%;
+
+        @include media(992){
+            width: 70px;
+        }
+
+        @include media(768){
+            display: none;
+        }
+    }
+
+    .pepper2{
+        width: 110px;
+        position: absolute;
+        top: 100px;
+        right: 5%;
+
+        @include media(992){
+            width: 90px;
+        }
+
+        @include media(768){
+            top: 10px;
+        }
+
+        @include media(576){
+            width: 70px;
+        }
+
+        @include media(400){
+            width: 50px;
+            top: 30px;
+        }
+    }
+
+    .pepper3{
+        width: 140px;
+        position: absolute;
+        top: 80px;
+        left: 5%;
+
+        @include media(992){
+            width: 100px;
+        }
+
+        @include media(768){
+            top: 20px;
+        }
+
+        @include media(576){
+            width: 80px;
+        }
+
+        @include media(400){
+            width: 60px;
+            top: 40px;
+        }
+    }
+}
